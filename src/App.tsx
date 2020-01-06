@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, makeStyles, MuiThemeProvider} from "@material-ui/core";
 import {createMuiTheme} from '@material-ui/core/styles';
 import {indigo, pink} from "@material-ui/core/colors";
-import StartPage from "./commons/component/StartPage";
+import Dashboard from "./commons/component/Dashboard";
 import AppHeader from "./commons/component/AppHeader";
 
 const theme = createMuiTheme({
@@ -25,7 +25,7 @@ const App: React.FC = () => {
     <MuiThemeProvider theme={theme}>
       <AppHeader/>
       <Container component={"main"} maxWidth="xl" className={classes.contentContainer}>
-        <StartPage/>
+        <Dashboard/>
       </Container>
     </MuiThemeProvider>
   );

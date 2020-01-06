@@ -2,7 +2,7 @@ import React from "react";
 import {Grid} from "@material-ui/core";
 import ShowEnvironmentParams from "../../environment/component/ShowEnvironmentParams";
 
-const StartPage: React.FC = () => {
+const Dashboard: React.FC = () => {
 
   return (
     <Grid
@@ -18,4 +18,4 @@ const StartPage: React.FC = () => {
   );
 };
 
-export default StartPage;
+export default Dashboard;
