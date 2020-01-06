@@ -7,8 +7,8 @@ const ShowEnvironmentParams: React.FC = () => {
       <Typography variant="h5" noWrap={true}>
         Parameters from environment files
       </Typography>
-      <div>Stage: {process.env.REACT_APP_STAGE}</div>
-      <div>Some value: {process.env.REACT_APP_SOME_VALUE}</div>
+      <div><b>Stage: </b><i>{process.env.REACT_APP_STAGE}</i></div>
+      <div><b>Some value: </b><i>{process.env.REACT_APP_SOME_VALUE}</i></div>
     </div>
   );
 };
