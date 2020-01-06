@@ -6,6 +6,7 @@ import {indigo, pink} from "@material-ui/core/colors";
 import Dashboard from "./commons/component/Dashboard";
 import AppHeader from "./commons/component/AppHeader";
 import PageNotFound from "./commons/component/PageNotFound";
+import AlignContentToCenter from "./layout/component/AlignContentToCenter";
 
 const theme = createMuiTheme({
   palette: {
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         <Container component={"main"} maxWidth="xl" className={classes.contentContainer}>
           <Switch>
             <Route path={"/"} exact component={Dashboard}/>
+            <Route path={"/alignContentToCenter"} exact component={AlignContentToCenter}/>
             <Route component={PageNotFound}/>
           </Switch>
         </Container>

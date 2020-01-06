@@ -1,9 +1,9 @@
 import React from "react";
-import {Grid} from "@material-ui/core";
+import {Grid, Typography} from "@material-ui/core";
 import ShowEnvironmentParams from "../../environment/component/ShowEnvironmentParams";
 import Links from "../../linkparams/component/Links";
 
-const Dashboard: React.FC = () => {
+const AlignContentToCenter: React.FC = () => {
 
   return (
     <Grid
@@ -13,13 +13,10 @@ const Dashboard: React.FC = () => {
       justify={"center"}
     >
       <Grid item>
-        <ShowEnvironmentParams/>
-      </Grid>
-      <Grid item>
-        <Links/>
+        <Typography component={"p"}>This content is aligned to center.</Typography>
       </Grid>
     </Grid>
   );
 };
 
-export default Dashboard;
+export default AlignContentToCenter;
