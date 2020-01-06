@@ -1,28 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ShowEnvironmentParams from "./component/ShowEnvironmentParams";
+import {Container, makeStyles, MuiThemeProvider} from "@material-ui/core";
+import {createMuiTheme} from '@material-ui/core/styles';
+import {indigo, pink} from "@material-ui/core/colors";
+import StartPage from "./commons/component/StartPage";
+import AppHeader from "./commons/component/AppHeader";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: indigo,
+    secondary: pink,
+  }
+});
+
+const useStyles = makeStyles(theme => ({
+  contentContainer: {
+    paddingTop: "4.5rem"
+  }
+}));
 
 const App: React.FC = () => {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-              <ShowEnvironmentParams/>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
-    );
-}
+  const classes = useStyles();
+
+  return (
+    <MuiThemeProvider theme={theme}>
+      <AppHeader/>
+      <Container component={"main"} maxWidth="xl" className={classes.contentContainer}>
+        <StartPage/>
+      </Container>
+    </MuiThemeProvider>
+  );
+};
 
 export default App;
