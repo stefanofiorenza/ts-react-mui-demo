@@ -12,16 +12,17 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Links: React.FC = () => {
+const Navigation: React.FC = () => {
 
   const classes = useStyles();
 
   return (
     <Paper className={classes.root}>
       <Typography variant="h5">
-        Routing test
+        Navigation
       </Typography>
       <List dense>
+        {createLinkListItem("/", classes.listItemIcon)}
         {createLinkListItem("/urlParam/John", classes.listItemIcon)}
         {createLinkListItem("/urlParam/Maria", classes.listItemIcon)}
         {createLinkListItem("/alignContentToCenter", classes.listItemIcon)}
@@ -45,4 +46,4 @@ const createLinkListItem = (path: string, className: any): any => {
   );
 };
 
-export default Links;
+export default Navigation;

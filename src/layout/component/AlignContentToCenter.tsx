@@ -1,7 +1,5 @@
 import React from "react";
 import {Grid, Typography} from "@material-ui/core";
-import ShowEnvironmentParams from "../../environment/component/ShowEnvironmentParams";
-import Links from "../../linkparams/component/Links";
 
 const AlignContentToCenter: React.FC = () => {
 
