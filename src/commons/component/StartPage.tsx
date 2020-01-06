@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../logo.svg";
-import ShowEnvironmentParams from "./ShowEnvironmentParams";
 import {Grid} from "@material-ui/core";
+import ShowEnvironmentParams from "../../environment/component/ShowEnvironmentParams";
 
 const StartPage: React.FC = () => {
 
@@ -15,14 +15,6 @@ const StartPage: React.FC = () => {
       <Grid item>
         <img src={logo} className="App-logo-big" alt="logo"/>
         <ShowEnvironmentParams/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </Grid>
     </Grid>
   );

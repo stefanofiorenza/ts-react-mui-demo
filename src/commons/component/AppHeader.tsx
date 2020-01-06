@@ -19,6 +19,8 @@ const AppHeader: React.FC = () => {
 
   const classes = useStyles();
 
+  console.log(process.env);
+
   return (
     <AppBar position="fixed">
       <Toolbar>
