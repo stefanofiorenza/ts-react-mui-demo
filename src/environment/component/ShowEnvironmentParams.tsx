@@ -1,19 +1,11 @@
 import React from "react";
-import {makeStyles, Paper, Table, TableBody, TableCell, TableHead, TableRow, Typography} from "@material-ui/core";
+import {Table, TableBody, TableCell, TableHead, TableRow, Typography} from "@material-ui/core";
 import {getEnvironmentParams} from "../service/EnvironmentService";
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    padding: "1rem"
-  }
-}));
 
 const ShowEnvironmentParams: React.FC = () => {
 
-  const classes = useStyles();
-
   return (
-    <Paper className={classes.root}>
+    <div>
       <Typography variant="h5">
         Environment parameters
       </Typography>
@@ -33,7 +25,7 @@ const ShowEnvironmentParams: React.FC = () => {
           ))}
         </TableBody>
       </Table>
-    </Paper>
+    </div>
   )
 };
 

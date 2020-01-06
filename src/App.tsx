@@ -3,12 +3,12 @@ import {Container, Grid, makeStyles, MuiThemeProvider} from "@material-ui/core";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {createMuiTheme} from '@material-ui/core/styles';
 import {indigo, pink} from "@material-ui/core/colors";
-import Dashboard from "./commons/component/Dashboard";
 import AppHeader from "./commons/component/AppHeader";
 import PageNotFound from "./commons/component/PageNotFound";
 import AlignContentToCenter from "./layout/component/AlignContentToCenter";
 import Navigation from "./commons/component/Navigation";
 import UrlParamForReactClass from "./urlparams/component/UrlParamForReactClass";
+import ShowEnvironmentParams from "./environment/component/ShowEnvironmentParams";
 
 const theme = createMuiTheme({
   palette: {
@@ -37,9 +37,10 @@ const App: React.FC = () => {
             </Grid>
             <Grid item xs={9}>
               <Switch>
-                <Route path={"/"} exact component={Dashboard}/>
+                <Route path={"/"} exact component={ShowEnvironmentParams}/>
+                <Route path={"/environmentParams"} exact component={ShowEnvironmentParams}/>
                 <Route path={"/alignContentToCenter"} exact component={AlignContentToCenter}/>
-                <Route path={"/urlParam/:name"} exact component={UrlParamForReactClass}/>
+                <Route path={"/urlParamForReactClass/:name"} exact component={UrlParamForReactClass}/>
                 <Route component={PageNotFound}/>
               </Switch>
             </Grid>

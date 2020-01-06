@@ -18,10 +18,15 @@ interface UrlParamForReactClassProps extends RouteComponentProps<{ name: string 
 class UrlParamForReactClass extends React.Component<UrlParamForReactClassProps, {}> {
   render() {
     return (
-      <Typography component="p">
-        URL-Parameter:
-        <span className={this.props.classes.param}>{this.props.match.params.name}</span>
-      </Typography>
+      <div>
+        <Typography variant="h5">
+          URL param for React Class
+        </Typography>
+        <Typography component="p">
+          URL-Parameter:
+          <span className={this.props.classes.param}>{this.props.match.params.name}</span>
+        </Typography>
+      </div>
     );
   }
 }

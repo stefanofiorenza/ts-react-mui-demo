@@ -23,8 +23,9 @@ const Navigation: React.FC = () => {
       </Typography>
       <List dense>
         {createLinkListItem("/", classes.listItemIcon)}
-        {createLinkListItem("/urlParam/John", classes.listItemIcon)}
-        {createLinkListItem("/urlParam/Maria", classes.listItemIcon)}
+        {createLinkListItem("/environmentParams", classes.listItemIcon)}
+        {createLinkListItem("/urlParamForReactClass/John", classes.listItemIcon)}
+        {createLinkListItem("/urlParamForReactClass/Maria", classes.listItemIcon)}
         {createLinkListItem("/alignContentToCenter", classes.listItemIcon)}
         {createLinkListItem("/notexisting", classes.listItemIcon)}
       </List>
