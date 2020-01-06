@@ -9,6 +9,8 @@ import AlignContentToCenter from "./layout/component/AlignContentToCenter";
 import Navigation from "./commons/component/Navigation";
 import UrlParamForReactClass from "./urlparams/component/UrlParamForReactClass";
 import ShowEnvironmentParams from "./environment/component/ShowEnvironmentParams";
+import UrlParamForReactFunction from "./urlparams/component/UrlParamForReactFunction";
+import Start from "./commons/component/Start";
 
 const theme = createMuiTheme({
   palette: {
@@ -37,10 +39,11 @@ const App: React.FC = () => {
             </Grid>
             <Grid item xs={9}>
               <Switch>
-                <Route path={"/"} exact component={ShowEnvironmentParams}/>
+                <Route path={"/"} exact component={Start}/>
                 <Route path={"/environmentParams"} exact component={ShowEnvironmentParams}/>
                 <Route path={"/alignContentToCenter"} exact component={AlignContentToCenter}/>
                 <Route path={"/urlParamForReactClass/:name"} exact component={UrlParamForReactClass}/>
+                <Route path={"/urlParamForReactFunction/:name"} exact component={UrlParamForReactFunction}/>
                 <Route component={PageNotFound}/>
               </Switch>
             </Grid>

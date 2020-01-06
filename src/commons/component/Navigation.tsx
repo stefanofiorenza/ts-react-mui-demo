@@ -26,6 +26,8 @@ const Navigation: React.FC = () => {
         {createLinkListItem("/environmentParams", classes.listItemIcon)}
         {createLinkListItem("/urlParamForReactClass/John", classes.listItemIcon)}
         {createLinkListItem("/urlParamForReactClass/Maria", classes.listItemIcon)}
+        {createLinkListItem("/urlParamForReactFunction/John", classes.listItemIcon)}
+        {createLinkListItem("/urlParamForReactFunction/Maria", classes.listItemIcon)}
         {createLinkListItem("/alignContentToCenter", classes.listItemIcon)}
         {createLinkListItem("/notexisting", classes.listItemIcon)}
       </List>
